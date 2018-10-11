@@ -108,7 +108,7 @@
 
 <distributionManagement>
 	 
-	<!--    <repository>
+	    <repository>
 		  <id>test</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://localhost:8081/repository/testrelaease/</url>
@@ -118,8 +118,8 @@
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <url>http://localhost:8081/repository/testsnapshot/</url>
 	    </snapshotRepository>
-		-->
-	<repository>
+		
+	<!--<repository>
         <id>jfrog-test</id>
         <name>DESKTOP-M9C7M1U-releases</name>
         <url>http://localhost:8082/artifactory/mvn-snapshot</url>
@@ -129,7 +129,7 @@
         <name>DESKTOP-M9C7M1U-snapshots</name>
         <url>http://localhost:8082/artifactory/mvn-snapshot</url>
     </snapshotRepository>
- 
+ -->
     	
 </distributionManagement>
 	
