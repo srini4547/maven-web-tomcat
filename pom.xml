@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mt</groupId>
-  <artifactId>maven-web-project</artifactId>
+  <groupId>sp.mt</groupId>
+  <artifactId>maven-web-tomcat</artifactId>
   <packaging>war</packaging>
-  <version>1.1</version>
+  <version>1.1-SNAPSHOT</version>
   <name>Maven Web Project 18th August</name>
   <description>Maven Web Project for Java Project</description>
 
@@ -79,19 +79,59 @@
 		</dependency>
   </dependencies>
 
+  <!--
 	<distributionManagement>
-	    <repository>
-	      <id>nexus</id>
+	<repository>
+	      <id>test</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://localhost:8082/mithuntechno/repository/wallmart-releases/</url>
+	      <url>http://localhost:8081/repository/testrelaease/</url>
 	    </repository>
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>test</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://localhost:8082/mithuntechno/repository/wallmart-snapshot/</url>
+	      <url>http://localhost:8081/repository/testsnapshot/</url>
 	    </snapshotRepository>
-	</distributionManagement>
+		
+		<repository>
+        <id>jfrog-test</id>
+        <name>DESKTOP-M9C7M1U-releases</name>
+        <url>http://localhost:8082/artifactory/mvn-snapshot</url>
+    </repository>
+    <snapshotRepository>
+        <id>jfrog-test</id>
+        <name>DESKTOP-M9C7M1U-snapshots</name>
+        <url>http://localhost:8082/artifactory/mvn-snapshot</url>
+    </snapshotRepository>
 	
+	</distributionManagement>
+	-->
+
+<distributionManagement>
+	 
+	<!--    <repository>
+		  <id>test</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://localhost:8081/repository/testrelaease/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>test</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://localhost:8081/repository/testsnapshot/</url>
+	    </snapshotRepository>
+		-->
+	<repository>
+        <id>jfrog-test</id>
+        <name>DESKTOP-M9C7M1U-releases</name>
+        <url>http://localhost:8082/artifactory/mvn-snapshot</url>
+	</repository>
+	<snapshotRepository>
+        <id>jfrog-test</id>
+        <name>DESKTOP-M9C7M1U-snapshots</name>
+        <url>http://localhost:8082/artifactory/mvn-snapshot</url>
+    </snapshotRepository>
+ 
+    	
+</distributionManagement>
 	
   <build>
     <plugins>
