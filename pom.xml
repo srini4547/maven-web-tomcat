@@ -109,14 +109,14 @@
 <distributionManagement>
 	 
 	    <repository>
-		  <id>nexus</id>
-	      <name>Releases Nexus Repository</name>
-	      <url>http://192.168.33.60:8081/repository/release/</url>
+		  <id>nexus-test</id>
+	          <name>Releases Nexus Repository</name>
+	          <url>http://192.168.33.60:8081/repository/release/</url>
 	    </repository>
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name> Snapshot Nexus Repository </name>
-	      <url>http://192.168.33.60:8081/repository/snap-shot/</url>
+	          <id>nexus-test</id>
+	          <name> Snapshot Nexus Repository </name>
+	          <url>http://192.168.33.60:8081/repository/snap-shot/</url>
 	    </snapshotRepository>
 		
 	<!--<repository>
