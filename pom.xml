@@ -6,7 +6,8 @@
   <groupId>sp.mt</groupId>
   <artifactId>maven-web-tomcat</artifactId>
   <packaging>war</packaging>
-  <version>1.1-SNAPSHOT</version>
+  <!--<version>1.1-SNAPSHOT</version> -->
+	<version>1.2</version>
   <name>Maven Web Project 18th August</name>
   <description>Maven Web Project for Java Project</description>
 
