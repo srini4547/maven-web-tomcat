@@ -1,0 +1,38 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+  - name: disk space check for redhat and suse
+    shell : "df -k {{item}} | tail -1 | awk '{ print $4 }'"
+    with_items:
+      - "/var"
+      - "/var/tmp"
+      - "/var/tmp/stage/"
+    register: var1
+    when: ansible_os_family== "RedHat"
+  - name: display
+    debug:
+      var: var1 
+
+  - name:  Check if the the 500MB disk space is free
+    debug:
+      msg: 
+      - The /opt, /var or /var/tmp/stage filesystem on $DEST is lower than 500MB.
+      - Please clean-up or extend the filesystem that is lower than 500MB and run this job again against $DEST."
+    when: var1.results[0].stdout < 5501176 
+
+  - name: disk space check for AIX
+    shell : "df -k {{item}} | tail -1 | awk '{ print $3 }'"
+    with_items:
+      - "/var"
+      - "/var/tmp"
+      - "/ var/tmp/stage/"
+    register: var2
+    when: ansible_os_family==["AIX","Solaris"]
+  - name:  Check if the the 500MB disk space is free
+    debug:
+      msg: 
+      - The /opt, /var or /var/tmp/stage filesystem on $DEST is lower than 500MB.
+      - Please clean-up or extend the filesystem that is lower than 500MB and run this job again against $DEST."
+    when: var2.results[0].stdout >= 5501176
