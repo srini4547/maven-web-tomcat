@@ -11,7 +11,7 @@ node {
 
          // sh 'mvn install'
 	       
-	       sh 'git merge origin master'
+	     //  sh 'git merge origin master'
        }
 	   
       stage('Sonar') {
