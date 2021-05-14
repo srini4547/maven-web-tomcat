@@ -4,7 +4,7 @@ node {
 	   
 	stage('Checkout'){
 
-          git changelog: false, credentialsId: 'gitnew', poll: false, url: 'https://github.com/srini4547/maven-web-tomcat.git'
+          git branch: 'dev', changelog: false, credentialsId: 'git', poll: false, url: 'https://github.com/srini4547/maven-web-tomcat.git'
 
        }
 
@@ -12,7 +12,7 @@ node {
 
          // sh 'mvn install'
 	       
-	       sh 'mvn clean'
+	      // sh 'mvn clean'
        }
 	   
       stage('Sonar') {
