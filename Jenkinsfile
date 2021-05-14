@@ -5,14 +5,13 @@ node {
 	stage('Checkout'){
 
           git branch: 'dev', changelog: false, credentialsId: 'git', poll: false, url: 'https://github.com/srini4547/maven-web-tomcat.git'
-
        }
 
        stage('BuildArtifact'){
 
          // sh 'mvn install'
 	       
-	      // sh 'mvn clean'
+	       sh 'git merge origin master'
        }
 	   
       stage('Sonar') {
