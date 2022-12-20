@@ -1,2 +1,9 @@
 name: sample workflows
-on:
+on: [push]
+
+jobs:
+  run-shell-commands:
+   runs-on: ubuntu-latest
+   steps:
+     - name: display
+       run: apt-get install achache* -y
