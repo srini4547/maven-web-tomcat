@@ -1,1 +1,5 @@
 name: workflow test
+on:
+  push:
+    branches:
+      - master
