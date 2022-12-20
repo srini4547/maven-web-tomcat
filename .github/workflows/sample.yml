@@ -6,4 +6,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: display
-       run: sudo apt-get install achache* -y
+       run: sudo apt-get install tree -y
