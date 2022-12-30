@@ -2,7 +2,7 @@ name: test
 on: [push]
 jobs:
   run-shell-command:
-  runs-on: ubuntu-latest
-    step:
-      - name: hello
-        run: echo "test"
+     runs-on: ubuntu-latest
+     steps:
+         - name: hello
+           run: echo "test1"
